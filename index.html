@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 	<head>
 		<title>Ivan Katalenić</title>
 
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link rel="icon" type="image/svg+xml" href="images 	/icon.svg">
+		<link rel="icon" type="image/svg+xml" href="images/icon.svg">
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +32,9 @@
 				font-size: 1.7rem;
 				font-weight: 600;
 			}
+			section {
+				margin-top: 4vh;
+			}
 			p {
 				color:rgb(43, 43, 43);
 				font-weight: 400;
@@ -48,29 +51,35 @@
 				font-family: 'Martian Mono', monospace;
 				font-size: 0.8rem;
 			}
+			img.link {
+				height: 1.5rem;
+			}
+			a.link {
+				margin-left: 0.2rem;
+				margin-right: 0.2rem;
+			}
 		</style>
 	</head>
 
 	<body>
 		<h1>Ivan Katalenić</h1>
 
-		<img class="profile-picture" src="images/profile.png" alt="Profile picture">
-
-		<p>
-			<em>A software development engineer.</em>
-		</p>
-		<p>
-			I design and develop high-performance and scalable software systems with simple and maintainable code.
-		</p>
-		<p>
-			I specialize in backend technologies and use languages such as <em>Go</em>, <em>Python</em>, <em>Java</em>, and <em>C++</em>.
-		</p>
-		<p>
-			Able to create clean and responsive websites with <em>HTML</em>, <em>CSS</em>, and <em>JavaScript</em>.
-		</p>
-		<p>
-			Contact me by mail <code>ivankatalenic100</code> at <code>gmail.com</code>.
-		</p>
+		<section>
+			<img class="profile-picture" src="images/profile.png" alt="Profile picture">
+			<p><em>A software development engineer.</em></p>
+		</section>
+		<section>
+			<p>I design and develop high-performance and scalable software systems with simple and maintainable code.</p>
+			<p>Specialized in backend technologies I use languages such as <em>Go</em>, <em>Python</em>, <em>Java</em>, and <em>C++</em>.</p>
+			<p>Able to create clean and responsive websites with <em>HTML</em>, <em>CSS</em>, and <em>JavaScript</em>.</p>
+		</section>
+		<section>
+			<p>Contact me by e-mail <code>ivankatalenic100</code> at <code>gmail.com</code>.</p>
+			<div class="links">
+				<a href="https://github.com/ivankatalenic" target="_blank" class="link"><img class="link" src="images/github-dark.svg"></a>
+				<a href="https://www.linkedin.com/in/katalenicivan/" target="_blank" class="link"><img class="link" src="images/ln-blue.png"></a>
+			</div>
+		</section>
 
 	</body>
 </html>
