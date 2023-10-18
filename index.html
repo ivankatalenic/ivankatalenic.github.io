@@ -13,23 +13,41 @@
 		<link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;600&family=Martian+Mono&display=swap" rel="stylesheet">
 
 		<style>
+			@keyframes main {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
 			html {
+				--em-color: rgb(43, 43, 43);
+				--reg-color: rgb(43, 43, 43);
+
 				background-color:rgb(241, 239, 222);
 				
 				font-size: min(1em, 5vw);
 				font-family: 'AR One Sans', sans-serif;
 			}
 			body {
+				animation-name: main;
+				animation-duration: 2s;
+				animation-timing-function: ease-out;
+
 				width: min(90vw, 50vh);
 				margin-left: auto;
 				margin-right: auto;
 				
 				text-align: center;
-				color:rgb(43, 43, 43);
+				color: var(--reg-color);
 			}
 			h1 {
 				font-size: 1.7rem;
 				font-weight: 600;
+			}
+			h2 {
+				font-size: 1.2em;
 			}
 			section {
 				margin-top: 4.5vh;
@@ -62,10 +80,20 @@
 			}
 			@media (prefers-color-scheme: dark) {
 				html {
+					--em-color: rgb(255, 255, 255);
+					--reg-color: rgb(167, 129, 97);
+
 					background-color:rgb(0, 0, 0);
+					text-shadow: 0 0 0.08em rgb(255, 238, 0);
 				}
 				body {
-					color:rgb(196, 166, 103);
+					color: var(--reg-color);
+				}
+				h1 {
+					color: var(--em-color);
+				}
+				h2 {
+					color: var(--em-color);
 				}
 				.light {
 					display: none;
@@ -74,7 +102,7 @@
 					display: inline;
 				}
 				em {
-					color:rgb(216, 166, 72);
+					color: var(--em-color);
 				}
 			}
 		</style>
@@ -85,14 +113,14 @@
 
 		<section>
 			<img class="profile-picture" src="images/profile.png" alt="Profile picture">
-			<p><em>A software development engineer.</em></p>
+			<h2><em>A software development engineer.</em></h2>
 		</section>
 		<section>
 			<p>I design and develop high-performance scalable software systems with simple and maintainable code.</p>
 			<p>Specialized in backend technologies I use languages such as <em>Go</em>, <em>Python</em>, <em>Java</em>, and <em>C++</em>.</p>
 			<p>Able to create clean and responsive websites using <em>HTML</em>, <em>CSS</em>, and <em>JavaScript</em>.</p>
 		</section>
-		<section>
+		<section id="contact">
 			<p>Contact me by e-mail <code>ivankatalenic100</code> at <code>gmail.com</code>.</p>
 			<div class="links">
 				<a href="https://github.com/ivankatalenic" target="_blank" class="link">
@@ -104,7 +132,12 @@
 					<img class="link dark" src="images/ln-white.png">
 				</a>
 				<a href="https://www.fiverr.com/ivankatalenic?up_rollout=true" target="_blank", class="link">
-					<img class="link" src="images/fiverr.svg">
+					<img class="link light" src="images/fiverr.svg">
+					<img class="link dark" src="images/fiverr-white.svg">
+				</a>
+				<a href="https://www.upwork.com/freelancers/~012708c756163bd7e1" target="_blank" class="link">
+					<img class="link light" src="images/upwork-green.svg">
+					<img class="link dark" src="images/upwork-white.svg">
 				</a>
 			</div>
 		</section>
