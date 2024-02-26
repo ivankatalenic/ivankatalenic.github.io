@@ -79,8 +79,12 @@
 				font-style: normal;
 			}
 			img.profile-picture {
-				width: min(50vw, 20vh);
-				border-radius: 0.5vw;
+				--image-width: min(50vw, 20vh);
+				width: var(--image-width);
+				border-radius: calc(var(--image-width) / 2);
+				outline-style: solid;
+				outline-width: calc(1.5 * var(--image-width) / 100);
+				outline-color: rgb(240, 240, 240);
 			}
 			code {
 				font-family: 'Martian Mono', monospace;
@@ -124,6 +128,9 @@
 				}
 				span.email {
 					color: var(--em-color);
+				}
+				img.profile-picture {
+					outline-color: rgb(26, 26, 26);
 				}
 			}
 		</style>
